@@ -45,7 +45,6 @@ const createStory = async (req, res) => {
             use_filename: true,
             folder: "postitimage"
         })
-        console.log(result.secure_url);
         req.body.image = result.secure_url
         fs.unlinkSync(req.files.image.tempFilePath)
         req.body.createdBy = userId
